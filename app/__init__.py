@@ -8,4 +8,4 @@ def index():
    # return "Ahoy!"
    nome='Gabriele'
    dados={"Profissão": "SRE", "cidade":"Santa Rosa"}
-   return render_template('index.html')
+   return render_template('index.html') 
