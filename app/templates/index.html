@@ -1,5 +1,49 @@
 {% extends 'base.html' %}
 
 {%block conteudo %}
-<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolores eveniet culpa saepe reprehenderit id est quasi recusandae fugit incidunt rerum, perspiciatis, dolorem eaque voluptatibus dignissimos quidem tempore velit. Ut? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem qui nobis reiciendis magnam, praesentium dolorem omnis obcaecati incidunt ipsam quidem aperiam libero commodi recusandae molestiae. Illum mollitia explicabo alias sed. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia reprehenderit commodi, assumenda odit doloremque repellat nesciunt! Odio natus aperiam possimus obcaecati, numquam quo voluptate deleniti, repellat, assumenda autem harum rem.</h2>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='../static/style.css') }}">
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" data-bs-pause="hover" data-bs-touch="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ url_for('static', filename='img/pão.jpg') }}" class="d-block w-100 img-carousel" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Pães fresquinhos</h5>
+          <p>Sempre prezando pela qualidade, a padaria oferece produtos recém saídos do forno.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='img/bolo.jpg') }}" class="d-block w-100 img-carousel" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Bolos por encomenda</h5>
+          <p>Aceitamos encomendas de bolos personalizados e com sabores especiais</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='img/doce.jpg') }}" class="d-block w-100 img-carousel" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Doces ousados</h5>
+          <p>Da padaria experimental, novidades todos os dias em doces especiais e tradicionais.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 {%endblock %}

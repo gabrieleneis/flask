@@ -1,0 +1,13 @@
+.logo { 
+    width: 100px;
+}
+
+#icons {
+    padding-right: 15px;
+}
+
+.img-carousel {
+    height: 400px;
+    object-fit: cover;
+    object-position: 0 50%;
+}
