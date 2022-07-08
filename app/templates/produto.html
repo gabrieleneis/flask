@@ -1,5 +1,50 @@
 {% extends 'base.html' %}
 
 {%block conteudo %}
-<h2>Salve, meu chefe.</h2>
+
+
+
+
+
+<section id="card">
+    <div class="container">
+        <h2 class="display-4 text-center mt-5">Produtos de Qualidade</h2>
+        <h3 class="display-7 text-center text-secondary fw-normal">Temos um catálogo extenso de produtos à pronta entrega e sob encomenda para satisfazer o que você precisa!</h3>
+      </div>
+    </section>   
+<div class="row justify-content-center">
+
+<div class="card" style="width: 18rem;">
+    <img src="{{ url_for('static', filename='img/assados.webp') }}" class="card-img-top img-produto" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Pães</h5>
+      <p class="card-text">Pães fresquinhos, preço à unidade.</p>
+    </div>
+  </div>
+
+<div class="card" style="width: 18rem;">
+    <img src="{{ url_for('static', filename='img/salgados.webp') }}" class="card-img-top img-produto" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Salgados</h5>
+      <p class="card-text">Salgados sortidos, preço à peso.</p>
+    </div>
+  </div>
+
+<div class="card" style="width: 18rem;">
+    <img src="{{ url_for('static', filename='img/doces.jpg') }}" class="card-img-top img-produto" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Doces</h5>
+      <p class="card-text">Doces sortidos, preço à peso.</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="{{ url_for('static', filename='img/tortas.jpg') }}" class="card-img-top img-produto" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Tortas</h5>
+      <p class="card-text">Bolos e tortas sob encomenda.</p>
+    </div>
+  </div>
+</div>
+</section>
+
 {%endblock %}

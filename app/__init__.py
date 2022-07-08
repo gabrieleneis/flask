@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__) #instanciando classe flask
 
 #endereço do site
@@ -17,5 +17,15 @@ def contato(): #define a rota
 @app.route('/produto')
 def produto():
    return render_template('produto.html')
+
+@app.route('/login')
+def login():
+   return render_template('login.html')
+
+@app.route('/autenticar')
+def autenticar():
+   usuario = request.args.get('usuario')
+   senha = request.args.get('senha')
+   return "usuario:{} e senha:{}".format(usuario,senha)
 
 app.run()
