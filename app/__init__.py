@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, flash, redirect, render_template, request
 app = Flask(__name__) #instanciando classe flask
 
+app.config['SECRET_KEY'] = "minha-chave"
 #endereço do site
 @app.route('/') #rota principal
 @app.route('/index') #rota alternativa
@@ -22,10 +23,21 @@ def produto():
 def login():
    return render_template('login.html')
 
-@app.route('/autenticar')
+#@app.route('/autenticar', methods=['GET'])
+#def autenticar():
+#   usuario = request.args.get('usuario')
+#   senha = request.args.get('senha')
+#   return "usuario:{} e senha:{}".format(usuario,senha)
+
+@app.route('/autenticar', methods=['POST'])
 def autenticar():
-   usuario = request.args.get('usuario')
-   senha = request.args.get('senha')
-   return "usuario:{} e senha:{}".format(usuario,senha)
+   usuario = request.form.get('usuario') #formulario
+   senha = request.form.get('senha')
+   if (usuario=='admin' and senha=='12345'):
+      return "usuario:{} e senha:{}".format(usuario,senha)
+   else:
+      flash('Dados Inválidos!')
+      return redirect('/login')
+
 
 app.run()
